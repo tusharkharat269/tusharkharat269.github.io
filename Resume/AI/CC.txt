@@ -1,0 +1,61 @@
+public class OlderAccountsUtility1 {
+    
+    public static void updateOlderAccounts(){
+        
+        Account[] oldAccounts = [SELECT Id,Description FROM Account ORDER BY CreatedDate ASC LIMIT 5];
+        
+        for(Account acct:oldAccounts){
+            acct.Description = 'MY account';
+        }
+        
+        update oldAccounts;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class pract_2 {
+    public static void linear_search(Integer key){
+        System.debug('Linear Search: ');
+        
+        integer s = -1;
+        
+        List<integer>lon = new List<integer>();
+        lon.add(3);
+        lon.add(5);
+        lon.add(7);
+        lon.add(9);
+        
+        System.debug('List: '+ lon);
+        
+        for(integer i=0; i < lon.size() ; i++)
+        {
+            
+            if(key == lon[i])
+            {
+                s = 1;
+            }
+        }
+        
+        if(s == 1){
+            system.debug('Element found');
+        }
+        else{
+            system.debug('Element NOT found');
+        }
+ 
+}
+
+}
