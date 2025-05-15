@@ -1,6 +1,25 @@
 'use strict';
 
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header");
+  const navToggleBtn = document.querySelector(".nav-toggle-btn");
+  const menuIcon = navToggleBtn.querySelector(".menu-icon");
+  const closeIcon = navToggleBtn.querySelector(".close-icon");
 
+  navToggleBtn.addEventListener("click", () => {
+    header.classList.toggle("nav-active");
+    navToggleBtn.classList.toggle("active");
+  });
+
+    const navLinks = document.querySelectorAll(".navbar-link");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      header.classList.remove("nav-active");
+      navToggleBtn.classList.remove("active");
+    });
+  });
+});
 
 /**
  * navbar toggle
