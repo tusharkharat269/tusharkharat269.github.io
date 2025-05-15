@@ -30,7 +30,6 @@
   --gutter: 30px;
   --border-width: 4px;
   --dot-diameter: 8px;
-
   --size: 50px; /* size of the cut */
   --gap: 10px;  /* the gap *
 
@@ -141,8 +140,6 @@ html {
 
 body {
   background-color: var(--space-cadet);
-  
-  
   color: var(--cadet-blue-crayola);
   font-size: 1.6rem;
   line-height: 1.6;
@@ -470,11 +467,9 @@ body {
 }
 
 .grade{
-
   color: rgba(0, 0, 0, 0.6);
   font-size: medium;
   margin-right: 10px;
-
   float: right;
 }
 
@@ -482,55 +477,141 @@ body {
   #Prjects
 \*-----------------------------------*/
 
-
-.project{
-
+.project {
   padding-block-start: 100px;
-  /* background-color: #a5a4a4; */
   clip-path: polygon(0 0, 70% 80px, 100% 0, 100% 100%, 0 100%);
-  margin-top: -20px;  
-
-
+  margin-top: -20px;
 }
 
-.pr-card{
-
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-   rgba(255, 255, 255, 0.985) 0px 8px 16px -8px;;
-
-  background-color: rgba(61, 127, 232, 0.367);
-  margin: 20px auto;
-  padding: 10px;
-  width: 95%;
-  color: #ffffff;
-
+.projects-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 10px 20px;
+  
 }
-.pr-card h3{
 
-  font-size: x-large;
+.projects-container::-webkit-scrollbar {
+  height: 8px;
 }
-.pr-card p{
-  font-size: medium;
-  margin: 10px;
-
+.projects-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
 }
-.github-link{
 
-  font-size: medium;
-  margin-top: 20px;
-  margin-right: 10px;
-  float: right;
+/* Show 2 cards by adjusting width relative to container */
+.pr-card {
+  flex: 0 0 calc(50% - 10px);
+  scroll-snap-align: start;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  height: 260px; /* Set fixed height */
+  overflow: hidden;
+
+  margin: 10px 0px;
 }
 
 
 .pr-card:hover {
-  
-  border-radius: 0.25rem;
-  color: black;
+  transform: scale(1.03);
+}
+
+/* Content handling */
+.pr-card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.pr-card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: larger;
+  color: #333;
+  margin: 0;
+  transition: transform 0.4s ease;
+  z-index: 2;
+}
+
+.pr-card h3 img {
+  width: 24px;
+  height: 24px;
+}
+
+.pr-card p {
+  text-align: justify;
+  direction: ltr; /* This will align text to the right while keeping justification */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+  font-size: small;
+  color: #444;
+  margin-top: 10px;
+  pointer-events: none;
+  padding: 5px 20px;
+
+  font-style:oblique;
+}
+
+
+.pr-card:hover .pr-card-content {
+  justify-content: flex-start;
+  padding-top: 5px;
+}
+
+.pr-card:hover p {
+  opacity: 1;
+  max-height: 300px;
 }
 
 
 
+
+
+
+
+
+/* .pr-card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+} */
+
+
+
+
+@media (max-width: 768px) {
+  .pr-card {
+    flex: 0 0 100%;
+  }
+}
+
+
+.pr-card p br {
+  margin-bottom: 5px;
+}
+
+.projects-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 5px;
+}
 
 
 /*-----------------------------------*\
@@ -549,38 +630,87 @@ body {
 
 .skills .section-text { margin-block-end: 70px; }
 
-.skills-list {
-  display: grid;
-  gap: 25px;
-}
+.skills-container {
+  padding: 20px 10px;
+  color: black;
+  text-align: left;
 
-.skills-item .wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-block-end: 10px;
+
+  /* background-color: black; */
 }
 
-.skills-title,
-.skills-data {
-  color: var(--white);
-  font-size: var(--fs-5);
-  font-family: var(--ff-barlow);
-  font-weight: var(--fw-600);
+.skills-subsection{
+  background-color: rgb(255, 255, 255);
+  padding: 10px 10px;
+  border-radius: 10px;
+  width: 90%;
+  height: fit-content;
+  margin: 5px 0;
+
 }
 
-.skills-progress-box {
-  background-color: var(--white);
-  height: 8px;
-  border-radius: var(--radius-10);
+.skills-subsection h3 {
+  font-size: medium;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
-.skills-progress {
-  /* background-color: #ff314c */
-  background-color: var(--orange-soda);
-  height: 100%;
-  border-radius: inherit;
+/* Horizontal rule under the section title */
+.skills-subsection hr {
+  border: none;
+  border-top: 2px solid #3498db;
+  width: 100%;
+  margin: 10px auto;
 }
+
+/* Skill list container (flex row) */
+.skill-list {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  height: 125px;
+}
+
+/* Individual skill card */
+.skill-card {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  /* margin: 5px 0; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width:fit-content;  /* Controls width */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image within the skill card */
+.skill-card img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card img:hover {
+  transform: scale(1.1);
+}
+
+
+
 
 
 /*-----------------------------------*\
