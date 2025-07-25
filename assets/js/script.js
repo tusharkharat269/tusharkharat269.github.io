@@ -46,10 +46,6 @@ for (let i = 0; i < navbarLinks.length; i++) {
   });
 }
 
-
-
-
-
 /**
  * back to top & header
  */
@@ -65,3 +61,22 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+
+
+  const switchInput = document.querySelector('.switch__input');
+
+  // Load saved theme from localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    switchInput.checked = true;
+  }
+
+  switchInput.addEventListener('change', () => {
+    document.body.classList.toggle('dark-theme');
+    localStorage.setItem(
+      'theme',
+      document.body.classList.contains('dark-theme') ? 'dark' : 'light'
+    );
+  });
+
