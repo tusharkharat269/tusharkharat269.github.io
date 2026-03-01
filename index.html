@@ -58,6 +58,10 @@
           </li>
 
           <li>
+            <a href="#experience" class="navbar-link" data-nav-link>Experience</a>
+          </li>
+
+          <li>
             <a href="#project" class="navbar-link" data-nav-link>Projects</a>
           </li>
 
@@ -121,26 +125,53 @@
         - #HERO
       -->
       <section class="hero" id="home">
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-particles" id="hero-particles">
+          <div class="particle" style="--size: 120px; --x: 8%; --y: 15%; --duration: 7s; --delay: 0s;"></div>
+          <div class="particle" style="--size: 80px; --x: 85%; --y: 20%; --duration: 9s; --delay: -3s;"></div>
+          <div class="particle" style="--size: 60px; --x: 70%; --y: 65%; --duration: 11s; --delay: -5s;"></div>
+          <div class="particle" style="--size: 100px; --x: 15%; --y: 70%; --duration: 8s; --delay: -2s;"></div>
+          <div class="particle" style="--size: 50px; --x: 50%; --y: 10%; --duration: 10s; --delay: -7s;"></div>
+          <div class="particle" style="--size: 70px; --x: 30%; --y: 80%; --duration: 12s; --delay: -4s;"></div>
+        </div>
         <div class="container">
           <div class="hero-content">
 
-            <h2 class="hero-title">
+            <h2 class="hero-title hero-animate" style="--delay: 0.3s">
               <span>Hello, my name is
               </span>
-              <strong class="myname">Tushar Kharat</strong>
+              <strong class="myname gradient-text">Tushar Kharat</strong>
             </h2>
 
-            <p class="hero-text">
+            <p class="hero-text hero-animate" style="--delay: 0.6s">
               I’m thrilled to have you here.
               Whether you're here to check out my projects, learn about my skills, 
               or just say hello—I hope you feel inspired to connect and collaborate.
               
             </p>
 
-            <div class="btn-group">
-              <a href="#about" class="btn btn-primary blue">About me</a>
+            <div class="btn-group hero-animate" style="--delay: 0.9s">
+              <a href="#about" class="btn btn-primary blue hero-btn">About me</a>
             </div>
 
+          </div>
+
+          <!-- Hero right side: theme-aware Lottie (light vs dark) -->
+          <div class="hero-banner" aria-hidden="true">
+            <dotlottie-wc
+              src="https://lottie.host/fef55b80-0c89-4f79-9209-55dfab30ae04/WoBFh99lgj.lottie"
+              class="hero-lottie hero-lottie-light"
+              background="transparent"
+              autoplay
+              loop
+            ></dotlottie-wc>
+            <dotlottie-wc
+              src="https://lottie.host/470fb618-ca1b-4af1-9a10-a7a11eab2f6d/wcm8pCeDY3.lottie"
+              class="hero-lottie hero-lottie-dark"
+              background="transparent"
+              autoplay
+              loop
+            ></dotlottie-wc>
           </div>
         </div>
       </section>
@@ -224,6 +255,58 @@
       </section>
 
       <!-- 
+      #Experience
+ -->
+      <section class="section experience" id="experience">
+        <div class="container">
+
+          <h2 class="h2 section-title">My Experience</h2>
+          <br>
+          <hr>
+          <br>
+
+          <div class="exp-cards">
+
+            <article class="exp-card">
+              <div class="exp-card__accent"></div>
+              <div class="exp-card__inner">
+                <header class="exp-card__header">
+                  <div class="exp-card__meta">
+                    <h3 class="exp-card__role">AI Agent Development Intern</h3>
+                    <p class="exp-card__company">Chirpn IT Solutions</p>
+                  </div>
+                  <span class="exp-card__period" title="Oct 2025 – Present">Oct 2025 – Present</span>
+                </header>
+                <ul class="exp-card__details">
+                  <li>Contributing to the development of agentic AI systems using modern frameworks such as MCP, LLMs, and RAG to build intelligent, context-aware applications.</li>
+                  <li>Writing scalable, optimized, and reusable Python code while gaining hands-on experience with industry-standard libraries, APIs, and frameworks for AI-driven solutions.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="exp-card">
+              <div class="exp-card__accent"></div>
+              <div class="exp-card__inner">
+                <header class="exp-card__header">
+                  <div class="exp-card__meta">
+                    <h3 class="exp-card__role">Data Science Intern</h3>
+                    <p class="exp-card__company">Innomatics Research Labs</p>
+                  </div>
+                  <span class="exp-card__period" title="Jan 2024 – Mar 2024">Jan 2024 – Mar 2024</span>
+                </header>
+                <ul class="exp-card__details">
+                  <li>Built an NLP pipeline using Python and scikit-learn, analyzing 8,000+ product reviews with ensemble methods achieving 95% accuracy and F1-score of 0.93 for sentiment classification.</li>
+                  <li>Executed comprehensive text preprocessing with tokenization, TF-IDF vectorization, enabling businesses to extract actionable insights with 89% precision in sentiment polarity detection and deployed the project.</li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 
       #Projects
  -->
       <section class="section project" id="project">
@@ -233,106 +316,185 @@
           <br>
           <hr><br>
 
-
+          <div class="projects-scroll-wrapper">
           <div class="projects-container">
 
             <div class="pr-card">
-              <a href="" class="github-corner" target="_blank" rel="noopener">
-                <img src="assets/images/github-logo.png" alt="GitHub" />
-              </a>
-              <div class="img">
-                <img src="assets/images/projects/helperly.png" alt="Sentiment Analysis">
+              <div class="pr-card-banner">
+                <img src="assets/images/projects/moneymate.png" alt="MoneyMate">
               </div>
-              <div class="top-text">
-                <div class="name">Helperly - A website</div>
-              </div>
-              <div class="bottom-text">
-                <div class="text">
-                  Helperly is a full-stack home service booking platform designed to connect users with professional service providers like electricians, technicians,etc.
-                  Built with a React frontend and Spring Boot backend, the platform allows customers to register, log in, view dashboards, book services.
-                  It features JWT-based authentication with PostgreSQL database.
+              <div class="pr-card-body">
+                <h3 class="pr-card-title">MoneyMate</h3>
+                <p class="pr-card-desc">
+                  AI-powered personal finance assistant chatbot with an agentic retrieval workflow,
+                  enabling natural language, multi-turn transaction analysis with session-based memory
+                  for accurate, personalized financial insights. Features automated extraction,
+                  categorization, and storage of transactions from bank statement PDFs into CSV/PostgreSQL
+                  for intelligent expense tracking.
+                </p>
+                <div class="pr-card-tech">
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="">FastAPI</span>
+                  <span class="tech-pill">LangChain</span>
+                  <span class="tech-pill">LangGraph</span>
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</span>
+                  <span class="tech-pill">OpenAI</span>
                 </div>
+              </div>
+              <div class="pr-card-footer">
+                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
               </div>
             </div>
 
             <div class="pr-card">
-              <a href="" class="github-corner" target="_blank" rel="noopener">
-                <img src="assets/images/github-logo.png" alt="GitHub" />
-              </a>
-              <div class="img">
+              <div class="pr-card-banner">
+                <img src="assets/images/projects/helperly.png" alt="Helperly">
+              </div>
+              <div class="pr-card-body">
+                <h3 class="pr-card-title">Helperly</h3>
+                <p class="pr-card-desc">
+                  A full-stack home service booking platform connecting users with professional service providers
+                  like electricians and technicians. Features JWT-based authentication, user dashboards,
+                  and seamless service booking with React frontend and Spring Boot backend.
+                </p>
+                <div class="pr-card-tech">
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="">React</span>
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="">Spring Boot</span>
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</span>
+                  <span class="tech-pill">JWT</span>
+                </div>
+              </div>
+              <div class="pr-card-footer">
+                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+                <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+
+            <div class="pr-card">
+              <div class="pr-card-banner">
                 <img src="assets/images/projects/dfd.png" alt="Driver Fatigue Detection">
               </div>
-              <div class="top-text">
-                <div class="name">Driver Fatigue Detection (android app)</div>
-
-              </div>
-              <div class="bottom-text">
-                <div class="text">
-                  Developed a real-time driver fatigue detection android app using java. Implemented a YOLOv11-based
-                  model to detect driver fatigue based on eye closure, and yawning frequency. Processed real-time webcam
-                  feed using tensorflow to analyze driver behavior and issue alerts for drowsiness.
+              <div class="pr-card-body">
+                <h3 class="pr-card-title">Driver Fatigue Detection</h3>
+                <p class="pr-card-desc">
+                  Real-time driver fatigue detection Android app using a YOLOv11-based model to detect drowsiness
+                  from eye closure and yawning frequency. Processes live webcam feed with TensorFlow
+                  to analyze driver behavior and issue timely safety alerts.
+                </p>
+                <div class="pr-card-tech">
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">Java</span>
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="">TensorFlow</span>
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="">Android</span>
+                  <span class="tech-pill">YOLOv11</span>
                 </div>
+              </div>
+              <div class="pr-card-footer">
+                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
               </div>
             </div>
 
             <div class="pr-card">
-              <a href="" class="github-corner" target="_blank" rel="noopener">
-                <img src="assets/images/github-logo.png" alt="GitHub" />
-              </a>
-              <div class="img">
-                <img src="assets/images/projects/spms.png" alt="Smart Parking Management">
+              <div class="pr-card-banner">
+                <img src="assets/images/projects/spms.png" alt="Smart Parking Management System">
               </div>
-              <div class="top-text">
-                <div class="name">Smart Parking Management System</div>
-              </div>
-              <div class="bottom-text">
-                <div class="text">
-                  Developed an automated parking management system using Python and Flask. Implemented automatic number
-                  plate recognition (ANPR) using OpenCV. MySQL integration and real-time vehicle detection.
+              <div class="pr-card-body">
+                <h3 class="pr-card-title">Smart Parking Management System</h3>
+                <p class="pr-card-desc">
+                  Automated parking management system with automatic number plate recognition (ANPR)
+                  using OpenCV for real-time vehicle detection. Built with Python and Flask,
+                  integrated with MySQL for efficient parking data management.
+                </p>
+                <div class="pr-card-tech">
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="">Flask</span>
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="">OpenCV</span>
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">MySQL</span>
                 </div>
+              </div>
+              <div class="pr-card-footer">
+                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+                <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
               </div>
             </div>
 
             <div class="pr-card">
-              <a href="" class="github-corner" target="_blank" rel="noopener">
-                <img src="assets/images/github-logo.png" alt="GitHub" />
-              </a>
-              <div class="img">
-                <img src="assets/images/projects/sar.png" alt="Sentiment Analysis">
+              <div class="pr-card-banner">
+                <img src="assets/images/projects/sar.png" alt="Sentiment Analysis of Product Reviews">
               </div>
-              <div class="top-text">
-                <div class="name">Sentiment Analysis of Product Reviews</div>
-              </div>
-              <div class="bottom-text">
-                <div class="text">
-                  Conducted sentiment analysis on product reviews using Python, focusing on customer feedback and
-                  satisfaction. Utilized Pandas for efficient data manipulation, feature engineering, and preprocessing.
-                  Implemented machine learning models, including logistic regression, decision tree, and Naive Bayes.
+              <div class="pr-card-body">
+                <h3 class="pr-card-title">Sentiment Analysis of Product Reviews</h3>
+                <p class="pr-card-desc">
+                  Sentiment analysis on product reviews using machine learning models including
+                  Logistic Regression, Decision Tree, and Naive Bayes. Leverages Pandas for
+                  data manipulation, feature engineering, and preprocessing of customer feedback.
+                </p>
+                <div class="pr-card-tech">
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
+                  <span class="tech-pill"><img src="https://img.icons8.com/?size=100&id=xSkewUSqtErH&format=png&color=000000" alt="">Pandas</span>
+                  <span class="tech-pill"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="">Scikit-Learn</span>
                 </div>
+              </div>
+              <div class="pr-card-footer">
+                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+                <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
               </div>
             </div>
 
             <div class="pr-card">
-              <a href="" class="github-corner" target="_blank" rel="noopener">
-                <img src="assets/images/github-logo.png" alt="GitHub" />
-              </a>
-              <div class="img">
+              <div class="pr-card-banner">
                 <img src="assets/images/projects/fjpc.png" alt="Fake Job Postings Classification">
               </div>
-              <div class="top-text">
-                <div class="name">Fake Job Postings Classification</div>
-              </div>
-              <div class="bottom-text">
-                <div class="text">
-                  Developed an ensemble machine learning model combining Support Vector Machine (SVM), K-Nearest
-                  Neighbors (KNN), and Random Forest algorithms to classify job postings as real or fake. Enhanced model
-                  accuracy by integrating multiple algorithms for robust performance.
+              <div class="pr-card-body">
+                <h3 class="pr-card-title">Fake Job Postings Classification</h3>
+                <p class="pr-card-desc">
+                  Ensemble machine learning model combining SVM, K-Nearest Neighbors, and Random Forest
+                  to classify job postings as real or fake. Achieves robust accuracy by integrating
+                  multiple algorithms with NLP-based text feature extraction.
+                </p>
+                <div class="pr-card-tech">
+                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
+                  <span class="tech-pill"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="">Scikit-Learn</span>
+                  <span class="tech-pill">NLP</span>
                 </div>
-
+              </div>
+              <div class="pr-card-footer">
+                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  GitHub
+                </a>
+                <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
               </div>
             </div>
-          </div>
 
+          </div>
+          </div>
 
         </div>
       </section>
@@ -351,140 +513,61 @@
 
           <div class="skills-container">
 
-            <!-- Programming Languages and Databases -->
+            <!-- Languages & Databases -->
             <div class="skills-subsection">
-              <h3>Programming Languages and Databases</h3>
+              <h3>Languages & Databases</h3>
               <hr>
-              <div class="skill-list">
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                  <p class="skill-name">Python</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-                  <p class="skill-name">Java</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                    alt="C++">
-                  <p class="skill-name">C++</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-                  <p class="skill-name">MySQL</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                    alt="PostgreSQL">
-                  <p class="skill-name">PostgreSQL</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                    alt="MongoDB">
-                  <p class="skill-name">MongoDB</p>
-                </div>
-
+              <div class="pr-card-tech">
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">Java</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">MySQL</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</span>
               </div>
             </div>
 
-            <!-- Libraries and Frameworks -->
+            <!-- Tools & Technologies -->
             <div class="skills-subsection">
-              <h3>Libraries and Frameworks</h3>
+              <h3>Tools & Technologies</h3>
               <hr>
-              <div class="skill-list">
-
-                <div class="skill-card">
-                  <img src="https://img.icons8.com/?size=100&id=xSkewUSqtErH&format=png&color=000000" alt="Pandas">
-                  <p class="skill-name">Pandas</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://img.icons8.com/?size=100&id=aR9CXyMagKIS&format=png&color=000000" alt="NumPy">
-                  <p class="skill-name">NumPy</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
-                    alt="Scikit-Learn">
-                  <p class="skill-name">Scikit-Learn</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
-                    alt="TensorFlow">
-                  <p class="skill-name">TensorFlow</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://matplotlib.org/_static/logo_dark.svg" alt="Scikit-Learn">
-                  <p class="skill-name">Matplotlib</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-                    alt="Spring Boot">
-                  <p class="skill-name">Spring Boot</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                    alt="Bootstrap">
-                  <p class="skill-name">Bootstrap</p>
-                </div>
-
+              <div class="pr-card-tech">
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="">Git / GitHub</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="">Docker</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="">Postman</span>
+                <span class="tech-pill"><img src="https://www.svgrepo.com/show/448266/aws.svg" alt="">AWS</span>
               </div>
             </div>
 
-            <!-- Tools and Technologies -->
+            <!-- Libraries & Frameworks -->
             <div class="skills-subsection">
-              <h3>Tools, Technologies and Others</h3>
+              <h3>Libraries & Frameworks</h3>
               <hr>
-              <div class="skill-list">
+              <div class="pr-card-tech">
+                <span class="tech-pill"><img src="https://img.icons8.com/?size=100&id=xSkewUSqtErH&format=png&color=000000" alt="">Pandas</span>
+                <span class="tech-pill"><img src="https://img.icons8.com/?size=100&id=aR9CXyMagKIS&format=png&color=000000" alt="">NumPy</span>
+                <span class="tech-pill"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="">Scikit-Learn</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="">PyTorch</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="">TensorFlow</span>
+                <span class="tech-pill"><img src="https://cdn.simpleicons.org/langchain" alt="">LangChain</span>
+                <span class="tech-pill"><img src="https://cdn.simpleicons.org/langchain" alt="">LangGraph</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="">FastAPI</span>
+              </div>
+            </div>
 
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-                  <p class="skill-name">Git / GitHub</p>
-                </div>
+            
 
-                <div class="skill-card">
-                  <img
-                    src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/24f1db8bdfab951c25db591772140d2f4ec5bc1e/SVG/Power-BI.svg"
-                    alt="Power BI">
-                  <p class="skill-name">Power BI</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-                  <p class="skill-name">Docker</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
-                    alt="Postman">
-                  <p class="skill-name">Postman</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://www.svgrepo.com/show/448266/aws.svg" alt="AWS">
-                  <p class="skill-name">AWS</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-                  <p class="skill-name">HTML</p>
-                </div>
-
-                <div class="skill-card">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-                  <p class="skill-name">CSS</p>
-                </div>
-
+            <!-- AI/ML Specialization -->
+            <div class="skills-subsection">
+              <h3>AI/ML Specialization</h3>
+              <hr>
+              <div class="pr-card-tech">
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9e0.svg" alt="">Machine Learning</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ec.svg" alt="">Deep Learning</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ac.svg" alt="">NLP</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f916.svg" alt="">Large Language Models (LLMs)</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50c.svg" alt="">MCP</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50d.svg" alt="">Retrieval-Augmented Generation (RAG)</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg" alt="">Generative AI</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9be.svg" alt="">Agentic AI</span>
               </div>
             </div>
 
@@ -506,7 +589,7 @@
 
             <div class="certificate-card">
               <div class="img">
-                <img src="/assets/images/certificates/Ict-academy.png" alt="Driver Fatigue Detection">
+                <img src="assets/images/certificates/Ict-academy.png" alt="Driver Fatigue Detection">
               </div>
               <div class="certificate-title">
                 <div class="name">Course on Artificial Intelligence</div>
@@ -515,7 +598,7 @@
 
             <div class="certificate-card">
               <div class="img">
-                <img src="/assets/images/certificates/Data-analysis.png" alt="Driver Fatigue Detection">
+                <img src="assets/images/certificates/Data-analysis.png" alt="Driver Fatigue Detection">
               </div>
               <div class="certificate-title">
                 <div class="name">Career Essentials in Data Analysis by Microsoft and LinkedIn</div>
@@ -524,7 +607,7 @@
 
             <div class="certificate-card">
               <div class="img">
-                <img src="/assets/images/certificates/innomatics.png" alt="Driver Fatigue Detection">
+                <img src="assets/images/certificates/innomatics.png" alt="Driver Fatigue Detection">
               </div>
               <div class="certificate-title">
                 <div class="name">Advanced Data analysis Internship Program</div>
@@ -533,7 +616,7 @@
 
             <div class="certificate-card">
               <div class="img">
-                <img src="/assets/images/certificates/SIH.png" alt="Driver Fatigue Detection">
+                <img src="assets/images/certificates/SIH.png" alt="Driver Fatigue Detection">
               </div>
               <div class="certificate-title">
                 <div class="name">Smart India Hackathon 2023</div>
@@ -542,7 +625,7 @@
 
             <div class="certificate-card">
               <div class="img">
-                <img src="/assets/images/certificates/avishkar.png" alt="Driver Fatigue Detection">
+                <img src="assets/images/certificates/avishkar.png" alt="Driver Fatigue Detection">
               </div>
               <div class="certificate-title">
                 <div class="name">Avishkar - 2023</div>
@@ -551,7 +634,7 @@
 
             <div class="certificate-card">
               <div class="img">
-                <img src="/assets/images/certificates/Yhills.png" alt="Driver Fatigue Detection">
+                <img src="assets/images/certificates/Yhills.png" alt="Driver Fatigue Detection">
               </div>
               <div class="certificate-title">
                 <div class="name">Course on Data Science</div>
@@ -622,6 +705,8 @@
     </div>
   </footer>
 
+  <!-- DotLottie web component for hero animation -->
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.3/dist/dotlottie-wc.js" type="module"></script>
   <!-- 
     - custom js link
   -->
