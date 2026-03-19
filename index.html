@@ -316,184 +316,201 @@
           <br>
           <hr><br>
 
-          <div class="projects-scroll-wrapper">
-          <div class="projects-container">
+          <div class="project-carousel" id="projectCarousel">
 
-            <div class="pr-card">
-              <div class="pr-card-banner">
-                <img src="assets/images/projects/moneymate.png" alt="MoneyMate">
-              </div>
-              <div class="pr-card-body">
-                <h3 class="pr-card-title">MoneyMate</h3>
-                <p class="pr-card-desc">
-                  AI-powered personal finance assistant chatbot with an agentic retrieval workflow,
-                  enabling natural language, multi-turn transaction analysis with session-based memory
-                  for accurate, personalized financial insights. Features automated extraction,
-                  categorization, and storage of transactions from bank statement PDFs into CSV/PostgreSQL
-                  for intelligent expense tracking.
-                </p>
-                <div class="pr-card-tech">
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="">FastAPI</span>
-                  <span class="tech-pill">LangChain</span>
-                  <span class="tech-pill">LangGraph</span>
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</span>
-                  <span class="tech-pill">OpenAI</span>
+            <button class="carousel-arrow carousel-arrow--left" aria-label="Previous project" data-carousel-prev>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+
+                <div class="pr-card">
+                  <div class="pr-card-banner">
+                    <img src="assets/images/projects/moneymate.png" alt="MoneyMate">
+                  </div>
+                  <div class="pr-card-body">
+                    <h3 class="pr-card-title">MoneyMate</h3>
+                    <div class="pr-card-tech">
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="">FastAPI</span>
+                      <span class="tech-pill">LangChain</span>
+                      <span class="tech-pill">LangGraph</span>
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</span>
+                      <span class="tech-pill">OpenAI</span>
+                    </div>
+                    <p class="pr-card-desc">
+                      AI-powered personal finance assistant chatbot with an agentic retrieval workflow,
+                      enabling natural language, multi-turn transaction analysis with session-based memory
+                      for accurate, personalized financial insights. Features automated extraction,
+                      categorization, and storage of transactions from bank statement PDFs into CSV/PostgreSQL
+                      for intelligent expense tracking.
+                    </p>
+                  </div>
+                  <div class="pr-card-footer">
+                    <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      GitHub
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div class="pr-card-footer">
-                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                  GitHub
-                </a>
+
+                <div class="pr-card">
+                  <div class="pr-card-banner">
+                    <img src="assets/images/projects/helperly.png" alt="Helperly">
+                  </div>
+                  <div class="pr-card-body">
+                    <h3 class="pr-card-title">Helperly</h3>
+                    <div class="pr-card-tech">
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="">React</span>
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="">Spring Boot</span>
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</span>
+                      <span class="tech-pill">JWT</span>
+                    </div>
+                    <p class="pr-card-desc">
+                      A full-stack home service booking platform connecting users with professional service providers
+                      like electricians and technicians. Features JWT-based authentication, user dashboards,
+                      and seamless service booking with React frontend and Spring Boot backend.
+                    </p>
+                  </div>
+                  <div class="pr-card-footer">
+                    <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      GitHub
+                    </a>
+                    <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+
+                <div class="pr-card">
+                  <div class="pr-card-banner">
+                    <img src="assets/images/projects/dfd.png" alt="Driver Fatigue Detection">
+                  </div>
+                  <div class="pr-card-body">
+                    <h3 class="pr-card-title">Driver Fatigue Detection</h3>
+                    <div class="pr-card-tech">
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">Java</span>
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="">TensorFlow</span>
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="">Android</span>
+                      <span class="tech-pill">YOLOv11</span>
+                    </div>
+                    <p class="pr-card-desc">
+                      Real-time driver fatigue detection Android app using a YOLOv11-based model to detect drowsiness
+                      from eye closure and yawning frequency. Processes live webcam feed with TensorFlow
+                      to analyze driver behavior and issue timely safety alerts.
+                    </p>
+                  </div>
+                  <div class="pr-card-footer">
+                    <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+
+                <div class="pr-card">
+                  <div class="pr-card-banner">
+                    <img src="assets/images/projects/spms.png" alt="Smart Parking Management System">
+                  </div>
+                  <div class="pr-card-body">
+                    <h3 class="pr-card-title">Smart Parking Management System</h3>
+                    <div class="pr-card-tech">
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="">Flask</span>
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="">OpenCV</span>
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">MySQL</span>
+                    </div>
+                    <p class="pr-card-desc">
+                      Automated parking management system with automatic number plate recognition (ANPR)
+                      using OpenCV for real-time vehicle detection. Built with Python and Flask,
+                      integrated with MySQL for efficient parking data management.
+                    </p>
+                  </div>
+                  <div class="pr-card-footer">
+                    <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      GitHub
+                    </a>
+                    <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+
+                <div class="pr-card">
+                  <div class="pr-card-banner">
+                    <img src="assets/images/projects/sar.png" alt="Sentiment Analysis of Product Reviews">
+                  </div>
+                  <div class="pr-card-body">
+                    <h3 class="pr-card-title">Sentiment Analysis of Product Reviews</h3>
+                    <div class="pr-card-tech">
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
+                      <span class="tech-pill"><img src="https://img.icons8.com/?size=100&id=xSkewUSqtErH&format=png&color=000000" alt="">Pandas</span>
+                      <span class="tech-pill"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="">Scikit-Learn</span>
+                    </div>
+                    <p class="pr-card-desc">
+                      Sentiment analysis on product reviews using machine learning models including
+                      Logistic Regression, Decision Tree, and Naive Bayes. Leverages Pandas for
+                      data manipulation, feature engineering, and preprocessing of customer feedback.
+                    </p>
+                  </div>
+                  <div class="pr-card-footer">
+                    <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      GitHub
+                    </a>
+                    <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+
+                <div class="pr-card">
+                  <div class="pr-card-banner">
+                    <img src="assets/images/projects/fjpc.png" alt="Fake Job Postings Classification">
+                  </div>
+                  <div class="pr-card-body">
+                    <h3 class="pr-card-title">Fake Job Postings Classification</h3>
+                    <div class="pr-card-tech">
+                      <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
+                      <span class="tech-pill"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="">Scikit-Learn</span>
+                      <span class="tech-pill">NLP</span>
+                    </div>
+                    <p class="pr-card-desc">
+                      Ensemble machine learning model combining SVM, K-Nearest Neighbors, and Random Forest
+                      to classify job postings as real or fake. Achieves robust accuracy by integrating
+                      multiple algorithms with NLP-based text feature extraction.
+                    </p>
+                  </div>
+                  <div class="pr-card-footer">
+                    <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      GitHub
+                    </a>
+                    <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            <div class="pr-card">
-              <div class="pr-card-banner">
-                <img src="assets/images/projects/helperly.png" alt="Helperly">
-              </div>
-              <div class="pr-card-body">
-                <h3 class="pr-card-title">Helperly</h3>
-                <p class="pr-card-desc">
-                  A full-stack home service booking platform connecting users with professional service providers
-                  like electricians and technicians. Features JWT-based authentication, user dashboards,
-                  and seamless service booking with React frontend and Spring Boot backend.
-                </p>
-                <div class="pr-card-tech">
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="">React</span>
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="">Spring Boot</span>
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</span>
-                  <span class="tech-pill">JWT</span>
-                </div>
-              </div>
-              <div class="pr-card-footer">
-                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                  GitHub
-                </a>
-                <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  Live Demo
-                </a>
-              </div>
+            <button class="carousel-arrow carousel-arrow--right" aria-label="Next project" data-carousel-next>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+
+            <div class="carousel-nav-row">
+              <div class="carousel-dots" id="carouselDots"></div>
+              <div class="carousel-counter"><span data-carousel-current>1</span> / <span data-carousel-total>6</span></div>
             </div>
 
-            <div class="pr-card">
-              <div class="pr-card-banner">
-                <img src="assets/images/projects/dfd.png" alt="Driver Fatigue Detection">
-              </div>
-              <div class="pr-card-body">
-                <h3 class="pr-card-title">Driver Fatigue Detection</h3>
-                <p class="pr-card-desc">
-                  Real-time driver fatigue detection Android app using a YOLOv11-based model to detect drowsiness
-                  from eye closure and yawning frequency. Processes live webcam feed with TensorFlow
-                  to analyze driver behavior and issue timely safety alerts.
-                </p>
-                <div class="pr-card-tech">
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">Java</span>
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="">TensorFlow</span>
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="">Android</span>
-                  <span class="tech-pill">YOLOv11</span>
-                </div>
-              </div>
-              <div class="pr-card-footer">
-                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                  GitHub
-                </a>
-              </div>
-            </div>
-
-            <div class="pr-card">
-              <div class="pr-card-banner">
-                <img src="assets/images/projects/spms.png" alt="Smart Parking Management System">
-              </div>
-              <div class="pr-card-body">
-                <h3 class="pr-card-title">Smart Parking Management System</h3>
-                <p class="pr-card-desc">
-                  Automated parking management system with automatic number plate recognition (ANPR)
-                  using OpenCV for real-time vehicle detection. Built with Python and Flask,
-                  integrated with MySQL for efficient parking data management.
-                </p>
-                <div class="pr-card-tech">
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="">Flask</span>
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="">OpenCV</span>
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="">MySQL</span>
-                </div>
-              </div>
-              <div class="pr-card-footer">
-                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                  GitHub
-                </a>
-                <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  Live Demo
-                </a>
-              </div>
-            </div>
-
-            <div class="pr-card">
-              <div class="pr-card-banner">
-                <img src="assets/images/projects/sar.png" alt="Sentiment Analysis of Product Reviews">
-              </div>
-              <div class="pr-card-body">
-                <h3 class="pr-card-title">Sentiment Analysis of Product Reviews</h3>
-                <p class="pr-card-desc">
-                  Sentiment analysis on product reviews using machine learning models including
-                  Logistic Regression, Decision Tree, and Naive Bayes. Leverages Pandas for
-                  data manipulation, feature engineering, and preprocessing of customer feedback.
-                </p>
-                <div class="pr-card-tech">
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
-                  <span class="tech-pill"><img src="https://img.icons8.com/?size=100&id=xSkewUSqtErH&format=png&color=000000" alt="">Pandas</span>
-                  <span class="tech-pill"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="">Scikit-Learn</span>
-                </div>
-              </div>
-              <div class="pr-card-footer">
-                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                  GitHub
-                </a>
-                <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  Live Demo
-                </a>
-              </div>
-            </div>
-
-            <div class="pr-card">
-              <div class="pr-card-banner">
-                <img src="assets/images/projects/fjpc.png" alt="Fake Job Postings Classification">
-              </div>
-              <div class="pr-card-body">
-                <h3 class="pr-card-title">Fake Job Postings Classification</h3>
-                <p class="pr-card-desc">
-                  Ensemble machine learning model combining SVM, K-Nearest Neighbors, and Random Forest
-                  to classify job postings as real or fake. Achieves robust accuracy by integrating
-                  multiple algorithms with NLP-based text feature extraction.
-                </p>
-                <div class="pr-card-tech">
-                  <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</span>
-                  <span class="tech-pill"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="">Scikit-Learn</span>
-                  <span class="tech-pill">NLP</span>
-                </div>
-              </div>
-              <div class="pr-card-footer">
-                <a href="#" class="pr-link pr-link--github" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                  GitHub
-                </a>
-                <a href="#" class="pr-link pr-link--demo" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  Live Demo
-                </a>
-              </div>
-            </div>
-
-          </div>
           </div>
 
         </div>
@@ -563,11 +580,12 @@
                 <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9e0.svg" alt="">Machine Learning</span>
                 <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9ec.svg" alt="">Deep Learning</span>
                 <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4ac.svg" alt="">NLP</span>
-                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f916.svg" alt="">Large Language Models (LLMs)</span>
                 <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50c.svg" alt="">MCP</span>
-                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50d.svg" alt="">Retrieval-Augmented Generation (RAG)</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f916.svg" alt="">Large Language Models (LLMs)</span>
                 <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg" alt="">Generative AI</span>
                 <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9be.svg" alt="">Agentic AI</span>
+                <span class="tech-pill"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f50d.svg" alt="">Retrieval-Augmented Generation (RAG)</span>
+
               </div>
             </div>
 
@@ -585,63 +603,79 @@
           <hr>
           <br>
 
-          <div class="certificates-container">
+          <ul class="cert-list">
 
-            <div class="certificate-card">
-              <div class="img">
-                <img src="assets/images/certificates/Ict-academy.png" alt="Driver Fatigue Detection">
+            <li class="cert-item">
+              <div class="cert-info">
+                <span class="cert-name">Complete Generative Al Course With Langchain and Huggingface</span>
+                <span class="cert-timeline">Udemy &middot; 2025</span>
               </div>
-              <div class="certificate-title">
-                <div class="name">Course on Artificial Intelligence</div>
-              </div>
-            </div>
+              <a href="#" class="cert-link" target="_blank" rel="noopener" aria-label="View certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </li>
 
-            <div class="certificate-card">
-              <div class="img">
-                <img src="assets/images/certificates/Data-analysis.png" alt="Driver Fatigue Detection">
+            <li class="cert-item">
+              <div class="cert-info">
+                <span class="cert-name">Career Essentials in Data Analysis</span>
+                <span class="cert-timeline">Microsoft &amp; LinkedIn &middot; 2024</span>
               </div>
-              <div class="certificate-title">
-                <div class="name">Career Essentials in Data Analysis by Microsoft and LinkedIn</div>
-              </div>
-            </div>
+              <a href="#" class="cert-link" target="_blank" rel="noopener" aria-label="View certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </li>
 
-            <div class="certificate-card">
-              <div class="img">
-                <img src="assets/images/certificates/innomatics.png" alt="Driver Fatigue Detection">
+            <li class="cert-item">
+              <div class="cert-info">
+                <span class="cert-name">Course on Artificial Intelligence</span>
+                <span class="cert-timeline">ICT Academy &middot; 2023</span>
               </div>
-              <div class="certificate-title">
-                <div class="name">Advanced Data analysis Internship Program</div>
-              </div>
-            </div>
+              <a href="#" class="cert-link" target="_blank" rel="noopener" aria-label="View certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </li>
 
-            <div class="certificate-card">
-              <div class="img">
-                <img src="assets/images/certificates/SIH.png" alt="Driver Fatigue Detection">
+            <!-- <li class="cert-item">
+              <div class="cert-info">
+                <span class="cert-name">Advanced Data Analysis Internship Program</span>
+                <span class="cert-timeline">Innomatics Research Labs &middot; 2024</span>
               </div>
-              <div class="certificate-title">
-                <div class="name">Smart India Hackathon 2023</div>
-              </div>
-            </div>
+              <a href="#" class="cert-link" target="_blank" rel="noopener" aria-label="View certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </li> -->
 
-            <div class="certificate-card">
-              <div class="img">
-                <img src="assets/images/certificates/avishkar.png" alt="Driver Fatigue Detection">
+            <li class="cert-item">
+              <div class="cert-info">
+                <span class="cert-name">Smart India Hackathon 2023</span>
+                <span class="cert-timeline">Government of India &middot; 2023</span>
               </div>
-              <div class="certificate-title">
-                <div class="name">Avishkar - 2023</div>
-              </div>
-            </div>
+              <a href="#" class="cert-link" target="_blank" rel="noopener" aria-label="View certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </li>
 
-            <div class="certificate-card">
-              <div class="img">
-                <img src="assets/images/certificates/Yhills.png" alt="Driver Fatigue Detection">
+            <li class="cert-item">
+              <div class="cert-info">
+                <span class="cert-name">Avishkar Research Convention</span>
+                <span class="cert-timeline">SPPU &middot; 2023</span>
               </div>
-              <div class="certificate-title">
-                <div class="name">Course on Data Science</div>
-              </div>
-            </div>
+              <a href="#" class="cert-link" target="_blank" rel="noopener" aria-label="View certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </li>
 
-          </div>
+            <li class="cert-item">
+              <div class="cert-info">
+                <span class="cert-name">Course on Data Science</span>
+                <span class="cert-timeline">Yhills &middot; 2023</span>
+              </div>
+              <a href="#" class="cert-link" target="_blank" rel="noopener" aria-label="View certificate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </li>
+
+          </ul>
 
       </section>
 
@@ -664,23 +698,20 @@
 
             <div class="social-links">
               <a href="https://www.instagram.com/tushar___k?igsh=MTRrYjFpMDRucGh5cQ==">
-                <img src="assets/images/insta_logo.png" alt="insta_logo"
-                  style="height: auto; width: 40px; margin: 5px;">
+                <img src="assets/images/insta_logo.png" alt="Instagram">
               </a>
               <a href="https://www.linkedin.com/in/tushar-kharat-a206082b8">
-                <img src="assets/images/linkedin_logo.png" alt="linkedin"
-                  style="height: auto; width: 40px; margin: 5px;">
+                <img src="assets/images/linkedin_logo.png" alt="LinkedIn">
               </a>
               <a href="https://github.com/tusharkharat269">
-                <img src="assets/images/github-logo.png" alt="github" style="height: auto; width: 40px; margin: 5px;">
+                <img src="assets/images/github-logo.png" alt="GitHub">
               </a>
               <a href="https://leetcode.com/u/tushar-kharat-26/">
-                <img src="assets/images/leetcode.svg" alt="leetcode" style="height: auto; width: 40px; margin: 5px;">
+                <img src="assets/images/leetcode.svg" alt="LeetCode">
               </a>
               <a href="https://www.geeksforgeeks.org/user/tushar09/">
-                <img src="assets/images/geeksforgeeks.svg" alt="gfg" style="height: auto; width: 50px; margin: 5px;">
+                <img src="assets/images/geeksforgeeks.svg" alt="GeeksforGeeks">
               </a>
-
             </div>
 
           </div>
@@ -699,7 +730,7 @@
     <div class="container">
 
       <p class="copyright">
-      <p>&copy; 2024 Tushar Kharat. All rights reserved.</p>
+      <p>&copy; 2026 Tushar Kharat. All rights reserved.</p>
       </p>
 
     </div>
